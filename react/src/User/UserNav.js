@@ -8,7 +8,7 @@ const UserNav = ({logo}) => {
 
     const handleLogout = (e) => {
         e.preventDefault();
-        axios.post('/api/logout').then(res => {
+        axios.post('/api/singout').then(res => {
 
             if (res.data.status === 200) {
                 localStorage.removeItem('auth_token', res.data.token);
